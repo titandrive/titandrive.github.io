@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Blogs/Boox and calibre.md","dg-permalink":"ereader","permalink":"/ereader/","title":"Calibre & Boox: Journey to the perfect ereader","created":"2025-11-02T13:43:15.494-08:00","updated":"2025-11-02T19:38:33.539-08:00"}
+{"dg-publish":true,"dg-path":"Blogs/Boox and calibre.md","dg-permalink":"ereader","permalink":"/ereader/","title":"Calibre & Boox: Journey to the perfect ereader","tags":["kindle","calibre","books","ereader"],"created":"2025-11-02T13:43:15.494-08:00","updated":"2025-11-02T19:38:58.714-08:00"}
 ---
 
 I have been an e-book reader since for nearly as long as I have been a reader. I wish I could remember what model it was, but my first ereader was some ancient Sony device. In fact, I  distinctly [Digital Fortress](https://en.wikipedia.org/wiki/Digital_Fortress) being one of the first books I read on it. That started a lifelong fondness not only for reading but also gadgets. 
