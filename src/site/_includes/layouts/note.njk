@@ -93,7 +93,7 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     {% endfor %}
     {%include "components/lucideIcons.njk"%}
 
-<!-- Image click-to-zoom -->
+<!-- Image click-to-zoom with stronger zoom for landscape -->
 <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -107,15 +107,22 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
       const { naturalWidth, naturalHeight } = img;
       const isLandscape = naturalWidth > naturalHeight;
 
-      // Delay slightly so the zoom instance is ready
-      setTimeout(() => {
-        zoom.update({
-          margin: isLandscape ? 0 : 100 // portrait = more padding, landscape = full-screen
-        });
-      }, 10);
+      // Apply stronger zoom for landscape images
+      const zoomedImg = document.querySelector('.medium-zoom-image--opened');
+      if (zoomedImg) {
+        zoomedImg.style.transition = 'transform 0.25s ease';
+        zoomedImg.style.transformOrigin = 'center center';
+        zoomedImg.style.transform = isLandscape ? 'scale(1.5)' : 'scale(1.1)';
+      }
+    });
+
+    zoom.on('close', () => {
+      const zoomedImg = document.querySelector('.medium-zoom-image--opened');
+      if (zoomedImg) zoomedImg.style.transform = '';
     });
   });
 </script>
+
 
 
 
