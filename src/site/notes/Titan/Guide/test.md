@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":" /test.md","permalink":"//test/","updated":"2025-11-02T18:01:37.400-08:00"}
+{"dg-publish":true,"permalink":"/titan/guide/test/","updated":"2025-11-02T18:13:33.981-08:00"}
 ---
 
-hello poop
+hello poop peep
