@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"dg-path":"Blogs/Boox and Calibre.md","dg-permalink":"blogs/ereader","permalink":"/blogs/ereader/","title":"Calibre & Boox: The perfect combo","tags":["kindle","calibre","books","ereader"],"created":"2025-11-02T13:43:15.494-08:00","updated":"2025-11-02T20:23:00.000-08:00"}
+{"dg-publish":true,"dg-path":"Blogs/Boox and Calibre.md","dg-permalink":"blogs/ereader","permalink":"/blogs/ereader/","title":"Calibre & Boox: The perfect combo","tags":["kindle","calibre","books","ereader"],"created":"2025-11-02T13:43:15.494-08:00","updated":"2025-11-02T21:22:06.614-08:00"}
 ---
 
 ## Intro
-I have been an e-book reader since for nearly as long as I have been a reader. I wish I could remember what model it was, but my first ereader was some ancient Sony device. In fact, I  distinctly [Digital Fortress](https://en.wikipedia.org/wiki/Digital_Fortress) being one of the first books I read on it. That started a lifelong fondness not only for reading but also gadgets. 
+I have been an e-book reader since for nearly as long as I have been a reader. I wish I could remember what model it was, but my first ereader was some ancient Sony device. In fact, I distinctly remember [Digital Fortress](https://en.wikipedia.org/wiki/Digital_Fortress) being one of the first books I read on it. That started a lifelong fondness not only for reading but also gadgets. 
 
 Since those early days, I have pretty much always had a Kindle by my side and keep my retired Paperwhites on my bookshelf, next to the books that they dutifully replaced. 
 
@@ -55,12 +55,42 @@ Koreader is probably the most popular reading app that I see mentioned frequentl
 
 ### Bookfusion
 
-Next I gave Bookfusion a try. Bookfusion initially was intriguing to me because it offers a more fullfeatured and polished approach to reading. At its essence, its a cloud service where you upload your books to its digital library. This can be accomplished either manually or via a Calibre [plugin](https://support.bookfusion.com/hc/en-us/articles/360018852052-Installing-Using-the-BookFusion-Plugin-for-Calibre). 
+Next I gave Bookfusion a try. Bookfusion initially was intriguing to me because it offers a more full-featured and polished approach to reading. At its essence, its a cloud service where you upload your books to its digital library. This can be accomplished either manually or via a Calibre [plugin](https://support.bookfusion.com/hc/en-us/articles/360018852052-Installing-Using-the-BookFusion-Plugin-for-Calibre). 
 
 There are a few [tiers](https://www.bookfusion.com/reading/pricing) of service, ranging from free to $95 a year, mainly depending on how many books you want to sync. I tried the free tier, which offers ten books. I initially really liked Bookfusion. The interface is quite nice to look at and it offers a decent amount of customizability. Most importantly, the syncing between my phone and Boox worked flawlessly. I also initially appreciated the Calibre plugin but since it only works with Calibre (not CW or CWA), I did not use it as much as I would like due to how much of a pain Calibre is to use. 
 
 My biggest issue with Bookfusion was that its support for controllers (i.e., page turners) is janky at best. I paired it with an [8Bitdo Micro](https://www.8bitdo.com/micro/) that I had lying around as test. I could get it work so that I could page forward and back using the Micro. The problem I ran into is that as soon as I interacted with the book (for example, increasing the font size), the controller stopped working until I backed out of the book and opened it again. This got extremely annoying very quickly. 
 
 ### Over the moon(reader)
-After being unimpressed with the first two apps, I next downloaded Moon+ Reader. Moon+ Reader seems to inhabit the perfect middle ground between Koreader and Bookfusion. It does not rely on a cloud service and therefore there is no subscription. Instead it relies on your local storage and syncing is accomplished via either dropbox or ftp. There *is* a paid version that is a one time purchase of $10.99 that adds additional themes and such, but the free version is perfectly usable. 
+After being unimpressed with the first two apps, I next downloaded Moonreader (sorry, I refused to keep typing Moon+ Reader). Moonreader seems to inhabit the perfect middle ground between Koreader and Bookfusion. It does not rely on a cloud service and therefore there is no subscription. Instead it relies on your local storage and syncing is accomplished via either dropbox or ftp. There *is* a paid version that is a one time purchase of $10.99 that adds additional themes and such, but the free version is perfectly usable. 
 
+I found the best way to import books into my library was via the Calibre Web Companion (CWC) app. I set CWC up so that it would download books directly into the Moonreader directory (SDCard/Books/Moonreader) and set Moonreader to automatically import any books in this directory. Therefore, as soon as I downloaded a book from CWC, it showed up in the library.
+
+I repeated this on both my Boox and phone. I was able to then read the same book on both devices. After some initial [[Titan/Website/Blogs/Boox and Calibre#^dropbox-sync\|hiccups]], I got syncing to work via dropbox nearly perfectly. 
+
+After spending way too much time futzing about with it, I figured it was time to actually start reading. I was quickly impressed by the level of customization available in Moonreader. Nearly every function of the reader is customizable. The basics such as padding, spacing, and fonts were of course there. It was super simple to upload my favorite font, [Jetbrains Mono](https://www.jetbrains.com/lp/mono/). But it was also easy to customize gestures and change how much, or how little, info shows in the status bar (reading progress, page location, etc). 
+
+The final test was to try using a bluetooth controller with it and see how it compared to Bookfusion. Much like everything else with Moonreader, the level of options was vast. Moonreader, unlike Bookfusion, clearly put a lot of effort into controller support. I had no problem setting up my Micro to not only page back and forward (via left and right dpad) but also switch between day and night mode. But most importantly, page turning worked exactly as expected without any jankiness. 
+
+
+![Boox_and_Calibre-oeoung-001.webp|200](/img/user/Apps/Attachments/Boox_and_Calibre-oeoung-001.webp)![Boox_and_Calibre-1m2qin-002.webp|200](/img/user/Apps/Attachments/Boox_and_Calibre-1m2qin-002.webp)![Boox_and_Calibre-rc4kek-003.webp|200](/img/user/Apps/Attachments/Boox_and_Calibre-rc4kek-003.webp)
+
+
+> [!bug]- Troubleshooting dropbox syncing
+>
+> While trying to set up syncing, initially, I ran into a lot of bugs and issues. I wanted to share what I found to solve someone else the future headache. 
+> 
+> Moonreader offers the option to connect directly with your Calibre Web library and download books into the reader. It also offers the option to sync books (no just reading progress) via dropbox. Don't use either of these features. I'm not sure exactly what the issue is, but something wierd happens when you let Moonreader sync the books between devices or download books from Caliber. For example, I found that if I downloaded a book to one device (via their Calibre feature or manually) and  synced the book to the other device, the book *would* show up on the second device. But it would throw a wierd error and the book would not open.  
+> 
+> If I downloaded the book to both devices, manually, via their calibre feature, I could not get syncing to work reliably at all.
+> 
+> The way to get it to sync reliably, and without issue, is to *not* use their Calibre feature or library syncing. I turned page progress sync on. I then manually downloaded the book to both devices using the Calibre Web Companion app, as mentioned above. Now, anytime I open a book it will load the progress from dropbox and if there was a change, ask if I want to skip ahead to the new location. 
+>
+{ #dropbox-sync}
+
+
+### Missing pieces: Page turner
+The final piece to my perfect ereading setup is finding the perfect page turner. The trick is finding a good bluetooth pageturner that works with ereaders. If you search Amazon for "pageturners", you will be met with a long list of the clip-on style turners I was trying to get away from. If you search for "bluetooth pageturner" you will find a ton of results for things that *look* like pageturners and are *advertised* as page turners but they are not pageturners, as I found out. Almost all of them are designed to connect to a phone and act as a remote for Tiktok of all things. What I learned, after buying a few, is that most of them imitate a screen swipe when you click the up and down button. 
+
+I eventually came across [this](https://www.amazon.com/dp/B0C7L9PVWP?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1) pageturner, which coincidentally looks almost identical to my be beloved clip-on pageturner. I didn't have high hopes for it since it was explicitly advertised as a TikTok remote and had no mention of pageturning anywhere. What I found, when I got it, through was that it had two modes: Tiktok Mode and Music mode. When you switch it to Music mode, the up and down buttons send a previous and next song command while the center button sends a pause command. Which is exactly what Moonreader is looking for! Huzzah! With this figured out, I configured it to page back and forward as well as toggle day/night mode. 
+### Battery Woes
