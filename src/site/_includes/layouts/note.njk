@@ -96,29 +96,122 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
 
 /* MEDIUM ZOOM */
 
-<!-- Simple image zoom with uniform scale -->
-<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const zoom = mediumZoom('.cm-s-obsidian img, .markdown-preview-view img, main img', {
-      background: 'rgba(0, 0, 0, 0.9)',
-      margin: 0
-    });
 
-    zoom.on('open', () => {
-      const zoomedImg = document.querySelector('.medium-zoom-image--opened');
-      if (zoomedImg) {
-        zoomedImg.style.transition = 'transform 0.3s ease';
-        zoomedImg.style.transformOrigin = 'center center';
-        zoomedImg.style.transform = 'scale(1.25)'; // 25% zoom for all images
-      }
-    });
+<!-- Include this partial near the end of your <body> (e.g. in your layout/footer) -->
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" defer></script>
+<script defer>
+/* Enhanced medium-zoom snippet — drop into your layout before </body>
+   Targets common Obsidian/Digital Garden images and improves zoom for wide (landscape)
+   and tall (portrait) images by computing an explicit fit scale and applying an optional boost.
+*/
+(function () {
+  // --- Config: tweak if needed ---
+  const SELECTOR = '.cm-s-obsidian img, .markdown-preview-view img, main img';
+  const BACKGROUND = 'rgba(0,0,0,0.88)';
+  const VIEWPORT_MARGIN = 24; // px margin around zoomed image
+  const BOOST = 1.2;          // >1 enlarges beyond perfect fit; 1 = exact fit
+  const TRANSITION_MS = 240;
+  // -------------------------------
 
-    zoom.on('close', () => {
-      const zoomedImg = document.querySelector('.medium-zoom-image--opened');
-      if (zoomedImg) zoomedImg.style.transform = '';
-    });
+  if (typeof mediumZoom === 'undefined') {
+    console.warn('medium-zoom not loaded. Make sure <script src="...medium-zoom..."> is included.');
+    return;
+  }
+
+  const zoom = mediumZoom(SELECTOR, {
+    background: BACKGROUND,
+    margin: VIEWPORT_MARGIN,
+    scrollOffset: 40
   });
+
+  function computeScaleForImage(imgEl) {
+    if (!imgEl) return 1;
+
+    const naturalW = imgEl.naturalWidth || imgEl.width || 1;
+    const naturalH = imgEl.naturalHeight || imgEl.height || 1;
+    const rect = imgEl.getBoundingClientRect();
+    const renderedW = rect.width || imgEl.width || 1;
+    const renderedH = rect.height || imgEl.height || 1;
+
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    const maxW = Math.max(1, vw - VIEWPORT_MARGIN * 2);
+    const maxH = Math.max(1, vh - VIEWPORT_MARGIN * 2);
+
+    const intrinsicW = naturalW;
+    const intrinsicH = naturalH;
+    const intrinsicRatio = intrinsicW && intrinsicH ? intrinsicW / intrinsicH : (renderedW / renderedH);
+
+    // Fit intrinsic ratio inside available viewport space
+    let fitW = maxW;
+    let fitH = maxW / intrinsicRatio;
+    if (fitH > maxH) { fitH = maxH; fitW = maxH * intrinsicRatio; }
+
+    const scaleW = fitW / (renderedW || 1);
+    const scaleH = fitH / (renderedH || 1);
+    const fitScale = Math.min(scaleW, scaleH);
+
+    // Don't exceed intrinsic pixel density excessively:
+    const maxIntrinsicScale = (intrinsicW / (renderedW || 1)) || fitScale;
+    const finalScale = Math.min(fitScale * BOOST, Math.max(fitScale, maxIntrinsicScale));
+
+    return (Number.isFinite(finalScale) && finalScale > 0) ? finalScale : 1;
+  }
+
+  function applyCustomScale() {
+    const opened = document.querySelector('.medium-zoom-image--opened');
+    if (!opened) return;
+
+    // Find the original element by matching src (works for typical img usage)
+    const src = opened.getAttribute('src') || opened.dataset.src || '';
+    const originals = Array.from(document.querySelectorAll(SELECTOR)).filter(i => {
+      return (i.getAttribute('src') || i.dataset.src || '') === src;
+    });
+    const original = originals[0] || opened;
+
+    const scale = computeScaleForImage(original);
+
+    // Preserve translate3d set by medium-zoom, replace scale(...) portion
+    const cur = opened.style.transform || '';
+    const translateMatch = cur.match(/translate3d\(([^)]+)\)/);
+    const translate = translateMatch ? `translate3d(${translateMatch[1]})` : '';
+
+    opened.style.transition = `transform ${TRANSITION_MS}ms cubic-bezier(.2,.8,.2,1)`;
+    opened.style.transformOrigin = 'center center';
+    opened.style.transform = `${translate} scale(${scale.toFixed(6)})`;
+    opened.style.zIndex = 99999;
+  }
+
+  // Override after open (let medium-zoom position first)
+  zoom.on('open', () => {
+    requestAnimationFrame(() => requestAnimationFrame(applyCustomScale));
+  });
+
+  // Reapply on viewport changes
+  let rafId = null;
+  function onViewportChange() {
+    if (!document.querySelector('.medium-zoom-image--opened')) return;
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => { applyCustomScale(); rafId = null; });
+  }
+  window.addEventListener('resize', onViewportChange, { passive: true });
+  window.addEventListener('orientationchange', onViewportChange, { passive: true });
+  window.addEventListener('scroll', onViewportChange, { passive: true });
+
+  // Clean up inline styles on close
+  zoom.on('close', () => {
+    const opened = document.querySelector('.medium-zoom-image--opened');
+    if (opened) {
+      opened.style.transform = '';
+      opened.style.transition = '';
+      opened.style.transformOrigin = '';
+      opened.style.zIndex = '';
+    }
+  });
+
+  // Escape to close
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') zoom.close(); });
+})();
 </script>
 
 
