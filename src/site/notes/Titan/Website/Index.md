@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Index.md","permalink":"/index/","title":"Home","pinned":"true","tags":["unraid","guide","titan","gardenEntry"],"created":"2025-10-26T17:48:47.527-07:00","updated":"2025-11-04T08:34:01.243-08:00"}
+{"dg-publish":true,"dg-path":"Index.md","permalink":"/index/","title":"Home","pinned":"true","tags":["unraid","guide","titan","gardenEntry"],"created":"2025-10-26T17:48:47.527-07:00","updated":"2025-11-04T08:39:31.303-08:00"}
 ---
 
 # Welcome
@@ -13,5 +13,8 @@ My goal with this website is to document that journey as I continue down the rab
 But hopefully this blossoms into something useful for other beginners new to the hobby. 
 
 > [!caution] Disclaimer 
+> For those coming to this site, I must offer a humble disclaimer: I have absolutely no idea what I am doing as I'm learning as I go and am entirely self taught. Because of that, the accuracy of this website is questionable at best. If you choose to follow anything on here, proceed at your own risk!
 > 
-For those coming to this site, I must offer a humble disclaimer: I have absolutely no idea what I am doing as I'm learning as I go and am entirely self taught. Because of that, the accuracy of this website is questionable at best. If you choose to follow anything on here, proceed at your own risk!
+> 
+
+
