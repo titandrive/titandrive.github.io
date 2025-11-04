@@ -1,40 +1,46 @@
 body {
-  
-/* Simple zoom on click */
-/* Stronger, generic targets */
-main :where(img, figure img) {
+
+
+/* Base zoom styling */
+picture img {
   cursor: zoom-in;
   transition: transform 0.25s ease;
   transform-origin: center center;
 }
 
-/* Click/press zoom (works even if image is wrapped in a link) */
-main :where(img:active, a:active > img) {
+/* Click/press zoom */
+picture:active img {
   transform: scale(1.25);
   cursor: zoom-out;
   position: relative;
   z-index: 9999;
 }
 
-/* Ensure the image isn’t clipped by parents */
-main figure,
-main :where(p, div, a) > img {
-  overflow: visible;
+/* Ensure zoomed image is not clipped */
+picture {
+  display: inline-block;
+  overflow: visible !important;
 }
 
-/* If an ancestor uses transform, give the figure a stacking context */
-main figure:has(img:active),
-main a:has(> img:active) {
-  position: relative;
-  z-index: 9999;
-}
-
-/* Desktop “hover” assist so you can verify it’s working without click */
+/* Optional hover preview */
 @media (hover: hover) {
-  main :where(img:hover, a:hover > img) {
+  picture:hover img {
     transform: scale(1.05);
   }
 }
 
+/* Figcaption styling */
+figure, picture {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+figcaption {
+  font-size: 0.85rem;
+  color: var(--muted-foreground, #888);
+  margin-top: 0.4rem;
+}
+
+  
     
 }
