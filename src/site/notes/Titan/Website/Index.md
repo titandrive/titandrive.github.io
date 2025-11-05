@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Index.md","permalink":"/index/","title":"Home","pinned":"true","tags":["unraid","guide","titan","gardenEntry"],"created":"2025-10-26T17:48:47.527-07:00","updated":"2025-11-04T19:56:01.637-08:00"}
+{"dg-publish":true,"dg-path":"Index.md","permalink":"/index/","title":"Home","pinned":"true","tags":["gardenEntry"],"created":"2025-10-26T17:48:47.527-07:00","updated":"2025-11-04T20:43:39.447-08:00"}
 ---
 
 # Welcome to Go for Titan 
