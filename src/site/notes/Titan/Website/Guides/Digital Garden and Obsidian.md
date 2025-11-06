@@ -1,44 +1,39 @@
 ---
-{"dg-publish":true,"dg-path":"Guides/Digital Garden and Obsidian.md","dg-permalink":"guides/digitalgarden","permalink":"/guides/digitalgarden/","title":"Publishing a blog to Github Pages via Obsidian & Digital Garden","tags":["obsidian","github"],"created":"2025-11-05T18:12:32.895-08:00","updated":"2025-11-05T21:16:30.625-08:00"}
+{"dg-publish":true,"dg-path":"Guides/Digital Garden and Obsidian.md","dg-permalink":"guides/digitalgarden","permalink":"/guides/digitalgarden/","title":"Publishing a blog to Github Pages via Obsidian & Digital Garden","tags":["obsidian","github"],"created":"2025-11-05T18:12:32.895-08:00","updated":"2025-11-06T07:03:44.181-08:00"}
 ---
 
 I have recently become obsessed with Obsidian and have fully embraced it as my repository for notes and brain dumps. Something about Obsidian tickles my brain in just the right way. It has reinvigorated my love of technical writing and was what spurred me to start this website in the first place. 
 
-One of my favorite things about Obsidian is how customizable it is and the near infinite amount of [[Titan/Website/Blog/Obsidian Setup\|Plugins]]. I have been trying to figure out a way to publish a blog directly from Obsidian when I came across [Digital Garden](https://dg-docs.ole.dev/) and realized it was exactly what I was hoping for. 
+One of my favorite things about Obsidian is how customizable it is and the near infinite amount of [[Titan/Website/Blog/Obsidian Setup\|Plugins]]. I have been trying to figure out a way to publish a blog directly from Obsidian when I came across [Digital Garden](https://dg-docs.ole.dev/).
 
-Digital Garden is an impressively cohesive plugin that allows you to publish your notes directly to a variety of hosting providers. It is specially built for Obsidian and translates your notes directly into HTML. It supports all the standard obsidian features like headings, callouts, and backlinks. Because of that, it removes all of the friction associated with website hosting and lets you publish your notes exactly as you see them with one click.
+Digital Garden is an impressively cohesive plugin that allows you to publish your notes directly to a variety of hosting providers. It is specifically built for Obsidian and translates your notes directly into HTML. It supports all the standard obsidian features like headings, callouts, and backlinks. Because of that, it removes all of the friction associated with website hosting and lets you publish your notes exactly as you see them with one click.
 
 The way Digital Garden works is that it first pushes your notes to Github and then publishes it to your hosting provider. The website gives a pretty thorough [tutorial](https://dg-docs.ole.dev/getting-started/01-getting-started/) on how to host your blog on [Vercel](https://vercel.com/signup). Unfortunately, Vercel is not [free](https://vercel.com/docs/pricing) and therefore not something I could justify for this website. 
 
-I then came across Wanderloot's [tutorial](https://wanderloots.xyz/digital-garden/published/what-is-a-digital-garden/) on setting up Digital Garden. In fact, Wanderloot was how I first became aware of the idea of digital gardens and [learning in public](https://wanderloots.xyz/digital-garden/published/learn-in-public/) which really spoke to me. His tutorial specifically focused on how to set it up via [Netlify](https://www.netlify.com/) as a free alternative to Vercel. I followed his tutorial and was up and running in less then thirty minutes. And an hour later, after updating my index page about ten times, I was hit with a paywall. Their pricing [structure](https://www.netlify.com/pricing/) is somewhat confusing but you are limited to 300 "credits" a month. Once you hit that, after only two deployments, you either have to pay or your website goes offline.  
+I then came across Wanderloot's [tutorial](https://wanderloots.xyz/digital-garden/published/what-is-a-digital-garden/) on setting up Digital Garden. In fact, Wanderloot was how I first became aware of the idea of digital gardens and [learning in public](https://wanderloots.xyz/digital-garden/published/learn-in-public/) which really spoke to me. His tutorial specifically focused on how to set it up via [Netlify](https://www.netlify.com/) as a free alternative to Vercel. I followed his tutorial and was up and running in less then thirty minutes. And an hour later, after updating my index page about ten times, I was hit with a paywall. Unfortunately, I think they changed their pricing since he made his post. Their pricing [structure](https://www.netlify.com/pricing/) is somewhat confusing but you are limited to 300 "credits" a month. Once you hit that, after only two deployments, you either have to pay or your website goes offline.  
 
-That lead me searching for a bette alternative. Digital Garden's own website mentioned [Github Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) as an [alternative](https://dg-docs.ole.dev/advanced/hosting-alternatives/) but didn't go into a great amount of detail, so I decided to figure it out and document it as I went. So here we go! 
-
+That lead me searching for a better alternative. Digital Garden's own website mentioned [Github Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) as an [alternative](https://dg-docs.ole.dev/advanced/hosting-alternatives/) but didn't go into a great amount of detail on how to accomplish that, so I decided to figure it out and document it as I went. So here we go! 
 ## Step 1: Install the Digital Garden Plugin
 I assume since you are reading this that you already have, and use, Obsidian. To get up and running with your first blog, install the Digital Garden [plugin](https://github.com/oleeskild/obsidian-digital-garden) via Community Plugins.
 
 ![Digital_Garden_and_Obsidian-5wb5fc-001.webp](/img/user/Apps/Attachments/Digital_Garden_and_Obsidian-5wb5fc-001.webp)
 
 ## Step 2: Set up Github 
-You will need a github account that you can setup a userpage on. Your username will then be the url for your new website: `sickblog.github.io`. Because of this, it might make more sense to create a new account for this. Once you set up your new account, do *not* create a repo. Proceed to step 3. 
+You will need a github account that you can setup a userpage on. Your username will then be the url for your new website: `pizzablog.github.io`. Because of this, it might make more sense to create a new account for this. Once you set up your new account, do *not* create a repo. Proceed to step 3. 
 
 
 > [!info] User vs Project Page
-> Github has two ways to present repo pages, user pages and project pages. The easiest way to differentiate the two is from their urls: 
+> Github has two ways to present repo pages: user pages and project pages. The easiest way to differentiate the two is from their urls: 
 > - User page: `username.github.io`
 > - Project page: `username.github.io/project` 
-> 
-> The easiest way to setup a user page is by creating a new repo and titling it with your user url:
-> - Repo Name: `username.github.io`
-> 
-> Now, when you type in that url it will bring you to that repo. 
+
 
 ## Step 3: Clone the repo
-Once you have your new github account, go to [this](https://github.com/oleeskild/digitalgarden) page. Click the green "Use this template" button on the top right and choose "create a new repository"
+Once you have created your Github account, go to [this](https://github.com/oleeskild/digitalgarden) page. Click the green "Use this template" button on the top right and choose "create a new repository"
 
 ![Digital_Garden_and_Obsidian-nqzys2-008.png](/img/user/Apps/Attachments/Digital_Garden_and_Obsidian-nqzys2-008.png)
 
-On the next screen, for the repository name, type in the full url of your github profile: `sickblog.github.io`. It is important that you type in the full url as this is what signals to Github to make this a userpage, which is what Digital Garden requires to function. 
+On the next screen, for the repository name, type in the full url of your github profile: `pizzablog.github.io`. It is important that you type in the full url as this is what signals to Github to make this a userpage, which is what Digital Garden requires to function. 
 
 Leave the repo public and click "create repository". It needs to be left as a public repo as this is required when we setup [[#Step 5 Setup Github Pages|Github Pages]] later. You *can* have a private repo published to Github pages if you pay for a [Pro](https://github.com/pricing) plan. But considering this will become a public website, it is likely not necessary. 
 ## Step 4: Set up your repo
@@ -47,12 +42,11 @@ We will now need to do some prep in order to get your repo fully ready to connec
 
 ![Digital_Garden_and_Obsidian-1b0osr-009.png](/img/user/Apps/Attachments/Digital_Garden_and_Obsidian-1b0osr-009.png)
 
-You will need to create two YAML files within .github/workflows: 
-- deploy.yml
-- build.yml 
+You will need to create two YAML files:  
+- .github/workflows/deploy.yml
+- .github/workflows/build.yml 
 
-Copy the below YAML code and paste it into their respective files and commit the changes. 
-
+Copy the below YAML and paste it into the respective files and commit the changes. 
 
 > [!build]-
 > 
@@ -161,7 +155,7 @@ Next, choose "only select repositories" and choose the repo you just created.
 
 ![Digital_Garden_and_Obsidian-hn1ysi-002.webp|700](/img/user/Apps/Attachments/Digital_Garden_and_Obsidian-hn1ysi-002.webp)
 
-Finally, go down to permissions and add Contents and Pull requests. Give them both read and write access.
+Finally, go down to permissions and add permissions for Contents and Pull requests. Give them both read and write access.
 
 ![Digital_Garden_and_Obsidian-l82qjw-004.webp|700](/img/user/Apps/Attachments/Digital_Garden_and_Obsidian-l82qjw-004.webp)
 
@@ -172,9 +166,9 @@ Now, go into settings for the Digital Garden plugin and fill out the following t
 ![Digital_Garden_and_Obsidian-pbax24-006.png|500](/img/user/Apps/Attachments/Digital_Garden_and_Obsidian-pbax24-006.png)
 
 ## Step 7: Declaring frontmatter
-You are almost ready to publish your first page. First, a little primer on frontmatter. In order to publish a page, Digital Garden requires a few items to be declared in the front matter. 
+You are almost ready to publish your first page. First, a little primer on frontmatter. Digital Garden relies on a variety of frontmatter declarations when it comes to publishing. 
 
-At the absolute minimum, Digital Garden requires the following to be declared in the frontmatter: `dg-publish: false`. This will create a checkbox at the top of your note. Once you are ready to publish a page, you will check the box which tells Digital Garden that it is safe to publish the page. This is great because it will *never* publish anything that you haven't explicitly told to. For your index page, you will also want to declare `dg-home: true`. You won't have to use that particular frontmatter again. 
+At the absolute minimum, Digital Garden requires the following to be declared in the frontmatter: `dg-publish:`. This will create a checkbox at the top of your note. Once you are ready to publish a page, you will check the box which tells Digital Garden that it is safe to publish the page. This is great because it will *never* publish anything that you haven't explicitly told it to. For your home page, you will also want to declare `dg-home: true`. You won't have to use that particular frontmatter again. 
 
 I created the following template that I insert whenever I am making a new page. 
 
@@ -189,8 +183,8 @@ dg-pinned: false
 ```
 
 - `title` is useful because Digital Garden, by default, will use your note title. But perhaps you want to use a different title for the webpage or use symbols that aren't allowed in Obsidian titles. 
-- `dg-permalink` is handy because you can change the path of your page to whatever you want. You may have a long title like "a blog about how I really like pepperoni pizza with onions on it" but you want it to be accessible at `sickblog.github.io/pizza`. Just put `dg-permalink:pizza`
-- `dg-pinned` pins the post to the top of the filetree. By default, pages are sorted alphabetically but perhaps you have one page that you want to show up on top. 
+- `dg-permalink` is handy because you can change the path of your page to whatever you want. You may have a long title like "a post about how I really like pepperoni pizza with onions on it" but you want it to be accessible at `pizzablog.github.io/pepperoni`. Just put `dg-permalink:pizza`
+- `dg-pinned` pins the post to the top of the filetree. By default, pages are sorted alphabetically but perhaps you have one page, such as the home page, that you want to show above the others. 
 
 I highly recommend reading through the full [docs](https://dg-docs.ole.dev/) to get the most out of Digital Garden.  
 ## Step 8: Publish your first page! 
