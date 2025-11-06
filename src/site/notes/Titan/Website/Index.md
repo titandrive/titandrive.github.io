@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"dg-path":"Index.md","permalink":"/index/","title":"Home","pinned":"true","tags":["gardenEntry"],"created":"2025-10-26T17:48:47.527-07:00","updated":"2025-11-05T17:46:56.243-08:00"}
+{"dg-publish":true,"dg-path":"Index.md","permalink":"/index/","title":"Home","pinned":"true","tags":["gardenEntry"],"created":"2025-10-26T17:48:47.527-07:00","updated":"2025-11-05T17:50:04.846-08:00"}
 ---
 
-![Index-596vnt-002.webp](/img/user/Apps/Attachments/Index-596vnt-002.webp)
+![Index-exl4rc-003.webp](/img/user/Apps/Attachments/Index-exl4rc-003.webp)
 # Welcome to Ion Drive 
 ## Launching my self-hosting journey with my first server, Titan
 
