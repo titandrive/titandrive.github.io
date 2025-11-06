@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Guides/Digital Garden and Obsidian.md","dg-permalink":"guides/digitalgarden","permalink":"/guides/digitalgarden/","title":"Publishing a blog to Github Pages via Obsidian & Digital Garden","tags":["obsidian","github"],"created":"2025-11-05T18:12:32.895-08:00","updated":"2025-11-05T21:09:09.539-08:00"}
+{"dg-publish":true,"dg-path":"Guides/Digital Garden and Obsidian.md","dg-permalink":"guides/digitalgarden","permalink":"/guides/digitalgarden/","title":"Publishing a blog to Github Pages via Obsidian & Digital Garden","tags":["obsidian","github"],"created":"2025-11-05T18:12:32.895-08:00","updated":"2025-11-05T21:11:58.466-08:00"}
 ---
 
 I have recently become obsessed with Obsidian and have fully embraced it as my repository for notes and brain dumps. Something about Obsidian tickles my brain in just the right way. It has reinvigorated my love of technical writing and was what spurred me to start this website in the first place. 
@@ -55,9 +55,11 @@ You will need to create two YAML files within .github/workflows:
 Copy the below YAML code and paste it into their respective files and commit the changes. 
 
 
-> [!build.yml]-
+> [!build]-
 > 
 > ```build.yml
+> # build.yml
+> 
 > # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 > # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 > 
@@ -91,9 +93,11 @@ Copy the below YAML code and paste it into their respective files and commit the
 > ```
 > 
 
-> [!deploy.yml]-
+> [!deploy]-
 > 
 > ```deploy.yml
+> #deploy.yml
+> 
 > name: Deploy Eleventy site to GitHub Pages
 > 
 > on:
