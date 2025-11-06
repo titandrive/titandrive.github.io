@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"dg-path":"Index.md","permalink":"/index/","title":"Home","pinned":"true","tags":["gardenEntry"],"created":"2025-10-26T17:48:47.527-07:00","updated":"2025-11-04T20:43:39.447-08:00"}
+{"dg-publish":true,"dg-path":"Index.md","permalink":"/index/","title":"Home","pinned":"true","tags":["gardenEntry"],"created":"2025-10-26T17:48:47.527-07:00","updated":"2025-11-05T17:00:17.016-08:00"}
 ---
 
-# Welcome to Go for Titan 
+# Welcome to Ion Drive 
 ## Launching my self-hosting journey with my first server, Titan
 
 Have you ever started a new hobby and immediately realized you were going to become obsessed with it? That was self-hosting for me. 
