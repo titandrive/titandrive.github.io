@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Blog/Boox and Calibre.md","dg-permalink":"blog/ereader","permalink":"/blog/ereader/","title":"Calibre & Boox: The perfect combo","tags":["kindle","calibre","books","ereader"],"created":"2025-11-02T13:43:15.494-08:00","updated":"2025-11-04T19:05:21.786-08:00"}
+{"dg-publish":true,"dg-path":"Blog/Boox and Calibre.md","dg-permalink":"blog/ereader","permalink":"/blog/ereader/","title":"Calibre & Boox: The perfect combo","hide":true,"tags":["kindle","calibre","books","ereader"],"created":"2025-11-02T13:43:15.494-08:00","updated":"2025-11-06T15:40:26.664-08:00"}
 ---
 
 # Intro
