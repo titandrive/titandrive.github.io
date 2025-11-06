@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Guides/Digital Garden and Obsidian.md","dg-permalink":"guides/digitalgarden","permalink":"/guides/digitalgarden/","title":"Publishing a blog to Github Pages via Obsidian & Digital Garden","tags":["obsidian","github"],"created":"2025-11-05T18:12:32.895-08:00","updated":"2025-11-05T21:01:21.580-08:00"}
+{"dg-publish":true,"dg-path":"Guides/Digital Garden and Obsidian.md","dg-permalink":"guides/digitalgarden","permalink":"/guides/digitalgarden/","title":"Publishing a blog to Github Pages via Obsidian & Digital Garden","tags":["obsidian","github"],"created":"2025-11-05T18:12:32.895-08:00","updated":"2025-11-05T21:03:16.302-08:00"}
 ---
 
 I have recently become obsessed with Obsidian and have fully embraced it as my repository for notes and brain dumps. Something about Obsidian tickles my brain in just the right way. It has reinvigorated my love of technical writing and was what spurred me to start this website in the first place. 
@@ -189,7 +189,6 @@ dg-pinned: false
 - `dg-pinned` pins the post to the top of the filetree. By default, pages are sorted alphabetically but perhaps you have one page that you want to show up on top. 
 
 I highly recommend reading through the full [docs](https://dg-docs.ole.dev/) to get the most out of Digital Garden.  
-
 ## Step 8: Publish your first page! 
 You are now ready to publish your first page! Create a new note and insert the template above. Type in a few sentences and check the publish box. 
 
@@ -197,3 +196,4 @@ Open the command palette (CMD P on Mac) and choose Digital Garden: Publish Singl
 
 Optionally, you can go back to your repo page and go to the actions tab. There, you can watch as Github processes and publishes your page. Once you see all green checkmarks, it should be accessible at `username.github.io`.
 
+![Digital_Garden_and_Obsidian-s36825-012.png|400](/img/user/Apps/Attachments/Digital_Garden_and_Obsidian-s36825-012.png)
