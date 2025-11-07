@@ -1,11 +1,11 @@
 ---
-{"dg-publish":true,"dg-path":"Guides/Digital Garden Tweaks.md","dg-permalink":"guides/dgtweaks","permalink":"/guides/dgtweaks/","title":"Digital Garden Tweaks","tags":["digitalgarden"],"created":"2025-11-06T19:35:42.324-08:00","updated":"2025-11-06T21:15:24.878-08:00"}
+{"dg-publish":true,"dg-path":"Guides/Digital Garden Tweaks.md","dg-permalink":"guides/dgtweaks","permalink":"/guides/dgtweaks/","title":"Digital Garden Tweaks","tags":["digitalgarden"],"created":"2025-11-06T19:35:42.324-08:00","updated":"2025-11-06T21:18:16.647-08:00"}
 ---
 
 I have made some minor modifications to the Digital Garden template that I wanted to share here. They aren't anything crazy but just a few things that I think improve the usability of the website. 
 - [[Website/Guides/Digital Garden Tweaks#Zoombox\|Zoombox]]
 - [[Website/Guides/Digital Garden Tweaks#Contact form\|Contact Form]]
-- [[Website/Guides/Digital Garden Tweaks#Heading Sizes .css\|Heading Sizes .css]]
+- [[Website/Guides/Digital Garden Tweaks#Heading Sizes Fix\|Heading Sizes Fix]]
 ## Zoombox
 You may have noticed that if you click on an image on my site, it pops up and zooms in so you can see it better. This is not a default behavior and requires a few .css and .js additions. 
 
@@ -125,7 +125,7 @@ Create a new note in Obsidian to put your contact form. Insert your Digital Gard
 > 
 
 Once you have created your note and entered your endpoint url, go ahead and publish it to Digital Garden. Once the page loads, you will notice it's kind of ugly. Let's fix that next. 
-## .CSS Magic
+### Make the contact form pretty
 
 Create a new .css file at `src/site/styles/user/contact.css`
 
@@ -187,7 +187,7 @@ Paste the following snippet in the file and commit the change. Once it's deploye
 > ```
 > 
 
-## Heading Sizes .css
+## Heading Sizes Fix
 The theme I am using (Brutalism) doesn't differentiate between heading sizes so H1 is rendered in the same size as H5. Annoying. Here is a simple .css snippet to fix that. I am still trying to perfect the balance between sizes. 
 
 It is placed at: `src/site/styles/user/headings.css`
