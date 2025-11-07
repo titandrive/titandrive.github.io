@@ -1,10 +1,11 @@
 ---
-{"dg-publish":true,"dg-path":"Guides/Digital Garden Tweaks.md","dg-permalink":"guides/dgtweaks","permalink":"/guides/dgtweaks/","title":"Digital Garden Tweaks","tags":["digitalgarden"],"created":"2025-11-06T19:35:42.324-08:00","updated":"2025-11-06T20:36:20.689-08:00"}
+{"dg-publish":true,"dg-path":"Guides/Digital Garden Tweaks.md","dg-permalink":"guides/dgtweaks","permalink":"/guides/dgtweaks/","title":"Digital Garden Tweaks","tags":["digitalgarden"],"created":"2025-11-06T19:35:42.324-08:00","updated":"2025-11-06T21:12:34.754-08:00"}
 ---
 
 I have made some minor modifications to the Digital Garden template that I wanted to share here. They aren't anything crazy but just a few things that I think improve the usability of the website. 
 - [[Website/Guides/Digital Garden Tweaks#Zoombox\|Zoombox]]
 - [[Website/Guides/Digital Garden Tweaks#Contact form\|Contact Form]]
+- Heading Sizes .css
 ## Zoombox
 You may have noticed that if you click on an image on my site, it pops up and zooms in so you can see it better. This is not a default behavior and requires a few .css and .js additions. 
 
@@ -85,8 +86,8 @@ Navigate to the Code section of your repo in Github. Place the following snippet
 > <script src="/scripts/zoombox.js"></script>
 > ```
 
-# Contact form
-## Formspree
+## Contact form
+### Formspree
 I wanted to create a contact [[Website/Contact\|form]] for the website. I did this by using [Formspree](https://formspree.io/) and some simple .css. The benefit of using Formspree is that you don't have to directly expose your email address on the page and subject it to spambots. 
 
 First, create an account on Formspree. Once you have an account, create a new form.
@@ -97,7 +98,7 @@ Once you create a form, it will give you an endpoint url. Copy that as we will n
 
 ![Digital_Garden_Tweaks-4h2bsp-002.png|500](/img/user/Apps/Attachments/Digital_Garden_Tweaks-4h2bsp-002.png)
 
-## Contact Page
+### Contact Page
 Create a new note in Obsidian to put your contact form. Insert your Digital Garden [[Website/Guides/Digital Garden and Obsidian#Step 7 Declaring frontmatter\|frontmatter]]. Then paste the below html snippet into the body of your note. Make sure to input your endpoint url into the appropriate spot in the first line of the snippet. 
 
 > [!success] Source Mode
@@ -183,5 +184,51 @@ Paste the following snippet in the file and commit the change. Once it's deploye
 >   background: var(--interactive-accent-hover);
 > }
 > 
+> ```
+> 
+
+## Heading Sizes .css
+The theme I am using (Brutalism) doesn't differentiate between heading sizes so H1 is rendered in the same size as H5. Annoying. Here is a simple .css snippet to fix that. I am still trying to perfect the balance between sizes. 
+
+It is placed at: `src/site/styles/user/headings.css`
+
+> [!NOTE]- headings.css
+> ```
+> h1 {
+>   font-size: 2.2rem !important;
+>   font-weight: 700 !important;
+>   margin-top: 2rem !important;
+>   margin-bottom: 1rem !important;
+> }
+> 
+> h2 {
+>   font-size: 1.7rem !important;
+>   font-weight: 600 !important;
+>   margin-top: 1.6rem !important;
+>   margin-bottom: 0.8rem !important;
+> }
+> 
+> h3 {
+>   font-size: 1.35rem !important;
+>   font-weight: 600 !important;
+>   margin-top: 1.2rem !important;
+>   margin-bottom: 0.6rem !important;
+> }
+> 
+> h4 {
+>   font-size: 1.15rem !important;
+>   font-weight: 600 !important;
+>   margin-top: 1rem !important;
+>   margin-bottom: 0.5rem !important;
+> }
+> 
+> h5 {
+>   font-size: 1rem !important;
+>   font-weight: 600 !important;
+>   margin-top: 0.8rem !important;
+>   margin-bottom: 0.4rem !important;
+>   text-transform: uppercase !important;
+>   letter-spacing: 0.03em !important;
+> }
 > ```
 > 
