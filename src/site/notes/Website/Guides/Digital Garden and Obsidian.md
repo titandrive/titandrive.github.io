@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Guides/Digital Garden and Obsidian.md","dg-permalink":"guides/digitalgarden","permalink":"/guides/digitalgarden/","title":"Publishing a blog to Github Pages via Obsidian & Digital Garden","tags":["obsidian","github","digitalgarden"],"created":"2025-11-05T18:12:32.895-08:00","updated":"2025-11-06T19:31:22.165-08:00"}
+{"dg-publish":true,"dg-path":"Guides/Digital Garden and Obsidian.md","dg-permalink":"guides/digitalgarden","permalink":"/guides/digitalgarden/","title":"Publishing a blog to Github Pages via Obsidian & Digital Garden","tags":["obsidian","github","digitalgarden"],"created":"2025-11-05T18:12:32.895-08:00","updated":"2025-11-06T20:23:59.523-08:00"}
 ---
 
 [[Website/Guides/Digital Garden and Obsidian#Step 1 Install the Digital Garden Plugin\|Skip to Step 1]]
@@ -48,7 +48,7 @@ You will need to add one other YAML file into the same directory: `.github/workf
 
 Copy the below YAML and paste into the new file and commit it. This file instructs Github on how to publish your website. 
 
-> [!deploy]-
+> [!code]- deploy.yml
 > 
 > ```deploy.yml
 > 
