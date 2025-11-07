@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Guides/Digital Garden and Obsidian.md","dg-permalink":"guides/digitalgarden","permalink":"/guides/digitalgarden/","title":"Publishing a blog to Github Pages via Obsidian & Digital Garden","tags":["obsidian","github","digitalgarden"],"created":"2025-11-05T18:12:32.895-08:00","updated":"2025-11-06T20:23:59.523-08:00"}
+{"dg-publish":true,"dg-path":"Guides/Digital Garden and Obsidian.md","dg-permalink":"guides/digitalgarden","permalink":"/guides/digitalgarden/","title":"Publishing a blog to Github Pages via Obsidian & Digital Garden","tags":["obsidian","github","digitalgarden"],"created":"2025-11-05T18:12:32.895-08:00","updated":"2025-11-06T20:25:05.333-08:00"}
 ---
 
 [[Website/Guides/Digital Garden and Obsidian#Step 1 Install the Digital Garden Plugin\|Skip to Step 1]]
@@ -24,7 +24,7 @@ I assume since you are reading this that you already have, and use, Obsidian. To
 You will need a github account that you can setup a userpage on. Your username will then be the url for your new website: `pizzablog.github.io`. Because of this, it might make more sense to create a new account for this. Once you set up your new account, do *not* create a repo. Proceed to step 3. 
 
 
-> [!info] User vs Project Page
+> [!success] User vs Project Page
 > Github has two ways to present repo pages: user pages and project pages. The easiest way to differentiate the two is from the url you use to access the repo:
 >  
 > - User page: `username.github.io`
