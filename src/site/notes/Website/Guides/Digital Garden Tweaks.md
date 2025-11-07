@@ -1,11 +1,11 @@
 ---
-{"dg-publish":true,"dg-path":"Guides/Digital Garden Tweaks.md","dg-permalink":"guides/dgtweaks","permalink":"/guides/dgtweaks/","title":"Digital Garden Tweaks","tags":["digitalgarden"],"created":"2025-11-06T19:35:42.324-08:00","updated":"2025-11-06T21:12:34.754-08:00"}
+{"dg-publish":true,"dg-path":"Guides/Digital Garden Tweaks.md","dg-permalink":"guides/dgtweaks","permalink":"/guides/dgtweaks/","title":"Digital Garden Tweaks","tags":["digitalgarden"],"created":"2025-11-06T19:35:42.324-08:00","updated":"2025-11-06T21:13:43.415-08:00"}
 ---
 
 I have made some minor modifications to the Digital Garden template that I wanted to share here. They aren't anything crazy but just a few things that I think improve the usability of the website. 
 - [[Website/Guides/Digital Garden Tweaks#Zoombox\|Zoombox]]
 - [[Website/Guides/Digital Garden Tweaks#Contact form\|Contact Form]]
-- Heading Sizes .css
+- [[Website/Guides/Digital Garden Tweaks#Heading Sizes .css\|Heading Sizes .css]]
 ## Zoombox
 You may have noticed that if you click on an image on my site, it pops up and zooms in so you can see it better. This is not a default behavior and requires a few .css and .js additions. 
 
