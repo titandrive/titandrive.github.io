@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Guides/Digital Garden Tweaks.md","dg-permalink":"guides/dgtweaks","permalink":"/guides/dgtweaks/","title":"My favorite Digital Garden Tweaks","tags":["digitalgarden"],"created":"2025-11-06T19:35:42.324-08:00","updated":"2025-11-06T20:25:51.638-08:00"}
+{"dg-publish":true,"dg-path":"Guides/Digital Garden Tweaks.md","dg-permalink":"guides/dgtweaks","permalink":"/guides/dgtweaks/","title":"Digital Garden Tweaks","tags":["digitalgarden"],"created":"2025-11-06T19:35:42.324-08:00","updated":"2025-11-06T20:29:31.505-08:00"}
 ---
 
 I have made some minor modifications to the Digital Garden template that I wanted to share here. They aren't anything crazy but just a few things that I think improve the usability of the website. 
@@ -98,27 +98,30 @@ Once you create a form, it will give you an endpoint url. Copy that as we will n
 ![Digital_Garden_Tweaks-4h2bsp-002.png|500](/img/user/Apps/Attachments/Digital_Garden_Tweaks-4h2bsp-002.png)
 
 ## Contact Page
-Create a new note in Obsidian to put your contact form. Insert your Digital Garden [[Website/Guides/Digital Garden and Obsidian#Step 7 Declaring frontmatter\|frontmatter]]. Then paste the following snippet into the body of your note. Make sure to paste your endpoint url into the appropriate spot in the first line. 
+Create a new note in Obsidian to put your contact form. Insert your Digital Garden [[Website/Guides/Digital Garden and Obsidian#Step 7 Declaring frontmatter\|frontmatter]]. Then paste the below html snippet into the body of your note. Make sure to input your endpoint url into the appropriate spot in the first line of the snippet. 
 
 > [!success] Source Mode
 > Once you paste the html code, it will likely transform from html into an actual form and make it hard to edit the code. If you click the ... menu in the top right of Obsidian and select "source mode" it will show you the bare code so you can edit it. 
 > ![Digital_Garden_Tweaks-1guobc-003.png|250](/img/user/Apps/Attachments/Digital_Garden_Tweaks-1guobc-003.png)
 > 
 
-```
-<form action="INSERT_ENDPOINT_HERE" method="POST" class="contact-form">
-  <label>Your Name
-    <input type="text" name="name" required>
-  </label>
-  <label>Your Email
-    <input type="email" name="_replyto" required>
-  </label>
-  <label>Message
-    <textarea name="message" rows="5" required></textarea>
-  </label>
-  <button type="submit">Send</button>
-</form>
-```
+> [!NOTE]- Contact form html
+> 
+> ```
+> <form action="INSERT_ENDPOINT_HERE" method="POST" class="contact-form">
+>   <label>Your Name
+>     <input type="text" name="name" required>
+>   </label>
+>   <label>Your Email
+>     <input type="email" name="_replyto" required>
+>   </label>
+>   <label>Message
+>     <textarea name="message" rows="5" required></textarea>
+>   </label>
+>   <button type="submit">Send</button>
+> </form>
+> ```
+> 
 
 Once you have created your note and entered your endpoint url, go ahead and publish it to Digital Garden. Once the page loads, you will notice it's kind of ugly. Let's fix that next. 
 ## .CSS Magic
