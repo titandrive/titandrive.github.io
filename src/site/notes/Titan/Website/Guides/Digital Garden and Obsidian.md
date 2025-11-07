@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Guides/Digital Garden and Obsidian.md","dg-permalink":"guides/digitalgarden","permalink":"/guides/digitalgarden/","title":"Publishing a blog to Github Pages via Obsidian & Digital Garden","tags":["obsidian","github","digitalgarden"],"created":"2025-11-05T18:12:32.895-08:00","updated":"2025-11-06T18:05:10.046-08:00"}
+{"dg-publish":true,"dg-path":"Guides/Digital Garden and Obsidian.md","dg-permalink":"guides/digitalgarden","permalink":"/guides/digitalgarden/","title":"Publishing a blog to Github Pages via Obsidian & Digital Garden","tags":["obsidian","github","digitalgarden"],"created":"2025-11-05T18:12:32.895-08:00","updated":"2025-11-06T18:06:42.370-08:00"}
 ---
 
 [[Titan/Website/Guides/Digital Garden and Obsidian#Step 1 Install the Digital Garden Plugin\|Skip to Step 1]]
