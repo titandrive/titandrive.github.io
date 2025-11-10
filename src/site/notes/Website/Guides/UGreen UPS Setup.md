@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Guides/UGreen UPS Setup.md","dg-permalink":"guides/ugreenups","permalink":"/guides/ugreenups/","title":"UGreen UPS & Unraid","tags":["guide","ugreen","unraid"],"created":"2025-11-09T16:38:29.679-08:00","updated":"2025-11-09T17:15:46.633-08:00"}
+{"dg-publish":true,"dg-path":"Guides/UGreen UPS Setup.md","dg-permalink":"guides/ugreenups","permalink":"/guides/ugreenups/","title":"UGreen UPS & Unraid","tags":["guide","ugreen","unraid"],"created":"2025-11-09T16:38:29.679-08:00","updated":"2025-11-09T17:18:02.066-08:00"}
 ---
 
 ## Connecting your UGreen UPS to Unraid via the NUT Plugin
@@ -18,7 +18,6 @@ As mentioned earlier, Unraid has it's own UPS capabilities (Settings/UPS Setting
 Install NUT via Community Apps. 
 
 ![Ugreen_USP_Setup-34p2iz-001.png|400](/img/user/Apps/Attachments/Ugreen_USP_Setup-34p2iz-001.png)
-
 ### Step 3: Setup NUT
 Once it is installed,  go to plugins and open up NUT. Once you are inside NUT settings, go to "enable manual configuration" and set it to "for UPS driver".
 
